@@ -7,9 +7,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Scripting;
 
-namespace MyCoolMod.Systems
+namespace WG_FittingWorkers.Systems
 {
-    public class MyCoolModSystem : GameSystemBase
+    public class WG_FittingWorkersSystem : GameSystemBase
     {
         // private SimulationSystem simulation;
 

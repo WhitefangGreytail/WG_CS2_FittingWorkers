@@ -9,9 +9,9 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
-		<AssemblyName>MyCoolMod</AssemblyName>
-		<RootNamespace>MyCoolMod</RootNamespace>
-		<Description>A mod that I made for Cities: Skylines 2</Description>
+		<AssemblyName>WG_FittingWorkers</AssemblyName>
+		<RootNamespace>WG_FittingWorkers</RootNamespace>
+		<Description>Cities: Skylines 2 mod to change commercial and industrial worker counts</Description>
 		<Version>0.1.0</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
