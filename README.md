@@ -1,90 +1,44 @@
-# Cities: Skylines 2 - C# Mod template
+# Cities Skylines 2 : Worker Capacity Booster
+Changes the calculation for commercial and industrial employment. Moves the calculation so that the worker count is higher at lower levels but leaves level 5 to be about the same.
+The larger difference is for office buildings which have much improved capacities vs vanilla.
 
-This repository template allows you to get started with Cities: Skylines 2 modding easily, all the way to building your mod on commit with GitHub Actions and publishing your mod automatically on Thunderstore.
 
-- [Requirements](#requirements)
-- [Usage](#usage)
-- [Renaming your project](#renaming-your-project)
-- [Set license details](#set-license-details)
-- [Incrementing version number](#incrementing-version-number)
-- [CI / GitHub Actions - Setup](#ci-github-actions-setup)
-- [Regarding BepInEx version 5 (Stable) VS 6 (Alpha/Unstable/Nightly)](#regarding-bepinex-version-5-stable-vs-6-alphaunstablenightly)
-- [Credits](#credits)
-- [Community](#community)
+## Instructions
+No setting available, although that is something that can be added in the future.
 
-# Requirements
 
-- [Cities: Skylines 2](https://store.steampowered.com/app/949230/Cities_Skylines_II/) (duh)
-- [BepInEx 5.4.22](https://github.com/BepInEx/BepInEx/releases) or later
-- (Optional) [dotnet-script](https://github.com/dotnet-script/dotnet-script) (for `rename.csx` helper script)
-    - Installation `dotnet tool install -g dotnet-script`
+### Safe to remove at any time
+This mod is not required to load any saves made with it.  Saves made with this mod will work perfectly fine without it (workplace calculations have already been stored in the building data on creation). Future buildings will revert to the original calculation.
 
-# Usage
+## Requirements
+- BepInEx 5
 
-- Create a new repository based on this one
-- Clone your new repository to your computer
-- Uncomment and update the `Cities2_Location` variable in `WG_FittingWorkers.csproj`
-- Run `make build`
+## Installation
+1. Make sure that BepInEx 5 is installed.
+1. Place the `WG_WorkerCapacityBooster` folder in the archive in your BepInEx `Plugins` folder.
 
-After running the last command, the mod should be automatically copied to your game directory,
-so launching the game should include running the mod you just started :)
+## Support
+It's usually easiest to contact me at the [**Cities 2 modding Discord**](https://discord.gg/vNGN82Dgc7)
 
-# Renaming your project
+## Misc
 
-You can leverage the helper script in `scripts/rename.csx` in order to replace "WG_FittingWorkers" with whatever you want to name your project. Usage:
+### Source code
+[Available on GitHub](https://github.com/WhitefangGreytail/WG_WorkerCapacityBooster) (
+WhitefangGreytail/WG_WorkerCapacityBooster).
 
-```
-$ dotnet script scripts\rename.csx "WG_FittingWorkers" "AnotherModIMade"
-```
+Be wary of mods without publicly available source code, it's too easy to download executables from somewhere and find it has been changed. Even then, "Trust, but verify", would be the motto I would say here.
 
-# Set license details
+### Why even think about trusting me then?
+Author of Realistic Population in Cities Skylines before handing it over to algernon-A. The repos in my GitHub still have them available for viewing.
+I wanted to make this mod, primarily for myself. Did learn a few things about the corner I was interested in, comments in the code.
 
-You'll need to update `LICENSE` with the correct details for `<Year>` and `<Author>`, and change "WG_FittingWorkers" to your mod name if you haven't already.
+## Disclaimers and legal
+The only authorized distribution platforms for this mod, or mods based substantially on the code of this mod, are the GitHub repo linked above, this Thunderstore.io upload, and Paradox Mods (that's the *actual* Paradox Mods at mods.paradoxplaza.com, not the **scam and malware site paradoxmods.net** which is explicitly NOT licensed to distribute any of my work, or works derived from my work).  Any version or copy of this mod that you encounter elsewhere is most likely being used as a vector for malware and should be ignored.
 
-# Incrementing version number
+Downloading, installation, and use of this mod is at your own risk.
 
-- Update `.csproj` file with new version number
-- Update `thunderstore.toml` file with new version number
-- Update `CHANGELOG` to describe the changes you've made between this and previous version
-- Commit version bump
-- Do a git tag with the new version number
-    - `git tag -a v0.2.0 -m v0.2.0`
-- Push your changes + tags
-    - `git push origin master --tags`
+>This mod is Copyright 2023 Whitefang Greytail (github.com/WhitefangGreytail).  All rights reserved. This mod is publically free to use, but not to distribute and claim that it is me who is releasing the mod.
 
-# CI / GitHub Actions - Setup
+>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-In order to get the CI/GitHub Actions workflow to work, you have to do a couple of things.
-
-- Create a new private repository with all the game DLLs that you require for building your mod
-- Create a new GitHub Personal Access Token ("PAT") that has only READ access to the created private repository
-- Create a new secret variable in GitHub Actions called `GH_PAT` that has your PAT with read access to the private repository
-
-Now the CI job should work as expected :)
-
-# Regarding BepInEx version 5 (Stable) VS 6 (Alpha/Unstable/Nightly)
-
-Currently, this mod template defaults to building against BepInEx version 6 (unstable pre-release). If you'd like to instead use Stable BepInEx version 5, you can run the build like this:
-
-```
-$ make build BEPINEX_VERSION=5
-```
-
-In order to run code only for one BepInEx version, you can do something like this:
-
-```
-#if BEPINEX_V6
-    using BepInEx.Unity.Mono;
-#endif
-```
-
-That would only run `using BepInEx.Unity.Mono` when you're building the project for BepInEx 6. Add in a `else` if you want to do something different when it's version 5.
-
-# Credits
-
-- Thanks to Cities Skylines 2 Unofficial Modding Discord
-- Particular thanks to [@StudioLE](https://github.com/StudioLE) who helped with feedback and improving .csproj setup
-
-# Community
-
-Looking to discuss Cities: Skylines 2 Unofficial modding together with other modders? You're welcome to join our "Cities 2 Modding" Discord, which you can find here: https://discord.gg/vd7HXnpPJf
+Enjoy!

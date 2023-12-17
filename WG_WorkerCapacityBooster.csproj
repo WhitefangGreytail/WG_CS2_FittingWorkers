@@ -9,8 +9,8 @@
 
 	<PropertyGroup>
 		<TargetFramework>netstandard2.1</TargetFramework>
-		<AssemblyName>WG_FittingWorkers</AssemblyName>
-		<RootNamespace>WG_FittingWorkers</RootNamespace>
+		<AssemblyName>WG_WorkerCapacityBooster</AssemblyName>
+		<RootNamespace>WG_WorkerCapacityBooster</RootNamespace>
 		<Description>Cities: Skylines 2 mod to change commercial and industrial worker counts</Description>
 		<Version>0.1.0</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>

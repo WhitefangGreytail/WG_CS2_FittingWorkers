@@ -3,7 +3,7 @@ using UnityEngine;
 using Game.Prefabs;
 using Game.Companies;
 using Game.Simulation;
-using WG_FittingWorkers.Systems;
+using WG_WorkerCapacityBooster.Systems;
 using static Game.Buildings.PropertyUtils;
 using Unity.Entities;
 using Unity.Mathematics;
@@ -12,7 +12,7 @@ using Unity.Collections;
 using Unity.Jobs;
 using Game.Economy;
 
-namespace WG_FittingWorkers.Patches
+namespace WG_WorkerCapacityBooster.Patches
 {
 	[HarmonyPatch(typeof(IndustrialAISystem), nameof(IndustrialAISystem.GetFittingWorkers))]
 	class IndustrialPatch

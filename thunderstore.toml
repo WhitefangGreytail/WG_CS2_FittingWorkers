@@ -3,7 +3,7 @@ schemaVersion = "0.0.1"
 
 [package]
 namespace = "CaptainOfCoit"
-name = "WG_FittingWorkers"
+name = "WG_WorkerCapacityBooster"
 versionNumber = "0.1.0"
 description = "Example mod description"
 websiteUrl = "https://thunderstore.io"

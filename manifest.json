@@ -1,8 +1,8 @@
 {
-  "name": "529TilesLite",
-  "version_number": "1.0.2",
-  "website_url": "https://github.com/algernon-A/FiveTwentyNineTilesLite",
-  "description": "Access all 529 game tiles in various ways, including unlocking all at the start",
+  "name": "WG_WorkerCapacityBooster",
+  "version_number": "0.1.0",
+  "website_url": "https://github.com/WhitefangGreytail/WG_WorkerCapacityBooster",
+  "description": "A mod to boost worker capacity. Most noticable on offices",
   "dependencies": [
     "BepInEx-BepInExPack-5.4.2100"
   ]

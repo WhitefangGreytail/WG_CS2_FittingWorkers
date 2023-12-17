@@ -7,9 +7,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Scripting;
 
-namespace WG_FittingWorkers.Systems
+namespace WG_WorkerCapacityBooster.Systems
 {
-    public class WG_FittingWorkersSystem : GameSystemBase
+    public class WG_WorkerCapacityBoosterSystem : GameSystemBase
     {
         // private SimulationSystem simulation;
 

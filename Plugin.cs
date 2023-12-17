@@ -13,7 +13,7 @@ using UnityEngine;
     using BepInEx.Unity.Mono;
 #endif
 
-namespace WG_FittingWorkers
+namespace WG_WorkerCapacityBooster
 {
     [BepInPlugin(MyPluginInfo.PLUGIN_GUID, MyPluginInfo.PLUGIN_NAME, MyPluginInfo.PLUGIN_VERSION)]
     public class Plugin : BaseUnityPlugin

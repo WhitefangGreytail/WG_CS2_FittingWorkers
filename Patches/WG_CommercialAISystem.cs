@@ -3,14 +3,14 @@ using UnityEngine;
 using Game.Prefabs;
 using Game.Companies;
 using Game.Simulation;
-using WG_FittingWorkers.Systems;
+using WG_WorkerCapacityBooster.Systems;
 using static Game.Buildings.PropertyUtils;
 using Unity.Entities;
 using Unity.Mathematics;
 using BepInEx;
 using System;
 
-namespace WG_FittingWorkers.Patches
+namespace WG_WorkerCapacityBooster.Patches
 {
 	[HarmonyPatch(typeof(CommercialAISystem), nameof(CommercialAISystem.GetFittingWorkers))]
 	class CommercialPatch
