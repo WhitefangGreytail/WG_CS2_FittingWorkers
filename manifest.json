@@ -1,6 +1,6 @@
 {
   "name": "WG_WorkerCapacityBooster",
-  "version_number": "0.1.0",
+  "version_number": "0.1.1",
   "website_url": "https://github.com/WhitefangGreytail/WG_WorkerCapacityBooster",
   "description": "A mod to boost worker capacity. Most noticable on offices",
   "dependencies": [

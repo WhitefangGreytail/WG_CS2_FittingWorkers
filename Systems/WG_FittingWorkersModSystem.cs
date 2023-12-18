@@ -6,7 +6,8 @@ using Unity.Entities;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Scripting;
-
+// Probably not required, keep for now
+/*
 namespace WG_WorkerCapacityBooster.Systems
 {
     public class WG_WorkerCapacityBoosterSystem : GameSystemBase
@@ -37,3 +38,4 @@ namespace WG_WorkerCapacityBooster.Systems
         protected override void OnUpdate() {}
     }
 }
+*/

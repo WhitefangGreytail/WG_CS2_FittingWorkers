@@ -1,11 +1,16 @@
 # Cities Skylines 2 : Worker Capacity Booster
-Changes the calculation for commercial and industrial employment. Moves the calculation so that the worker count is higher at lower levels but leaves level 5 to be about the same.
+Changes the calculation for commercial and industrial employment.
+Worker count is higher at lower levels but leaves a level 5 building to be the same.
+Offices however, also get a muliplier  boost for taller buildings by a power of 1.4
 The larger difference is for office buildings which have much improved capacities vs vanilla.
+Be prepared to funnel traffic towards smaller office regions.
 
 
 ## Instructions
 No setting available, although that is something that can be added in the future.
 
+### Safe to activate for existing cities
+Existing building capacities are not affected. Only buildings that start their construction while the mod is active has their capacity changed.
 
 ### Safe to remove at any time
 This mod is not required to load any saves made with it.  Saves made with this mod will work perfectly fine without it (workplace calculations have already been stored in the building data on creation). Future buildings will revert to the original calculation.

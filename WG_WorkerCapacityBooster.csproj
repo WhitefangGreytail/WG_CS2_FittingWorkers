@@ -12,7 +12,7 @@
 		<AssemblyName>WG_WorkerCapacityBooster</AssemblyName>
 		<RootNamespace>WG_WorkerCapacityBooster</RootNamespace>
 		<Description>Cities: Skylines 2 mod to change commercial and industrial worker counts</Description>
-		<Version>0.1.0</Version>
+		<Version>0.1.1</Version>
 		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 		<LangVersion>latest</LangVersion>
 		<RestoreAdditionalProjectSources>
