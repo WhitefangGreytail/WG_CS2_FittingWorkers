@@ -24,14 +24,14 @@ namespace WG_WorkerCapacityBooster.Patches
 			if (((ulong)properties.m_AllowedManufactured & unchecked((ulong)OFFICE_INDUSTRY)) > 0)
 			{
 				baseMultiplier = 2.75f; // Offices are slightly more dense than industry... at least in game
-				// Accounting for the taller buildings. CS2's 'height' and boosting it for offices which are taller
+				// Accounting for the taller buildings. CS2's 'height' and boosting it for high density
 				// TODO - If we can change the space multipler when loading the prefab (if it actually works this way), then remove it
-				spaceMultiplier = math.pow(spaceMultiplier, 1.4f);
+				spaceMultiplier = spaceMultiplier * math.min(math.min(building.m_LotSize.x, building.m_LotSize.y), WG_WorkerCapacityBooster.DataStore.officeBooster));
 			}
 
 			// This result for a new building results in a company with 2/3 of the capacity in an established city. The rest of the capacity will be filled as the company grows larger
 			__result = Mathf.CeilToInt(processData.m_MaxWorkersPerCell * (float)building.m_LotSize.x * (float)building.m_LotSize.y * (baseMultiplier + 0.25f * (float)level) * spaceMultiplier);
-			//System.Console.WriteLine("I(" + level + ") - " + __result);
+			System.Console.WriteLine($"I({level}) - {__result}: {processData.m_MaxWorkersPerCell},{building.m_LotSize.x},{building.m_LotSize.y},{level},{properties.m_SpaceMultiplier}");
 			return false; // Skip original
 		}
 	}

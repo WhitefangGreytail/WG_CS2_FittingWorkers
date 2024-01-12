@@ -20,16 +20,10 @@ namespace WG_WorkerCapacityBooster
     {
         private void Awake()
         {
-            Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} is loaded!");
             Harmony.DEBUG = true;
 
             var harmony = Harmony.CreateAndPatchAll(Assembly.GetExecutingAssembly(), MyPluginInfo.PLUGIN_GUID + "_Cities2Harmony");
             var patchedMethods = harmony.GetPatchedMethods().ToArray();
-
-            // TODO - Check to see if the methods I want to patch exist
-            // System.Reflection.MethodBase.GetCurrentMethod().Name
-
-            Logger.LogInfo($"Plugin {MyPluginInfo.PLUGIN_GUID} made patches! Patched methods: " + patchedMethods.Length);
 
             foreach (var patchedMethod in patchedMethods) {
                 Logger.LogInfo($"Patched method: {patchedMethod.Module.Name}:{patchedMethod.Name}");
