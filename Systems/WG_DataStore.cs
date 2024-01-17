@@ -12,6 +12,7 @@ namespace WG_WorkerCapacityBooster
 {
     public class DataStore
     {
+        public const float MAX_SPACE_MULTIPLIER = 6f;
         public static float officeBooster = 3f;
     }
 }
